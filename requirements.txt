@@ -2,3 +2,4 @@ pyyaml
 joblib
 ensure
 python-box
+pandas
