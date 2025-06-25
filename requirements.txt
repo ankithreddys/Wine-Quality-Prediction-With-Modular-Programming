@@ -3,3 +3,4 @@ joblib
 ensure
 python-box
 pandas
+scikit-learn

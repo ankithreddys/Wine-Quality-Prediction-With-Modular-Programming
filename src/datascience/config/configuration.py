@@ -1,6 +1,6 @@
 from src.datascience.constants import *
 from src.datascience.utils.common import read_yaml, create_directories
-from src.datascience.entity.config_entity import DataIngestionConfig, DataValidationConfig
+from src.datascience.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
 
 
 
@@ -42,4 +42,18 @@ class ConfigurationManager:
         )
 
         return data_validation_config
+
+
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transformation
+        schema = self.schema.TARGET_COLUMN
+        create_directories([config.root_dir])
+
+        data_transformation_config = DataTransformationConfig(
+            root_dir=config.root_dir,
+            data_file_csv = config.data_file_csv,
+            schema=schema
+        )
+
+        return data_transformation_config
 
