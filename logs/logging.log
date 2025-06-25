@@ -1,1 +1,86 @@
 [2025-06-24 14:58:34,089: INFO: main: Logging function included]
+[2025-06-25 01:39:29,488: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-25 01:39:29,488: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-25 01:39:29,488: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-25 01:39:29,488: ERROR: main: First argument must be mapping or iterable]
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\data_ingestion_pipeline.py", line 12, in initiate_data_ingestion
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\src\datascience\config\configuration.py", line 12, in __init__
+    self.schema = read_yaml(schema_filepath)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\ensure\main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\src\datascience\utils\common.py", line 21, in read_yaml
+    raise e
+  File "C:\PROJECTS\DatascienceProject\src\datascience\utils\common.py", line 18, in read_yaml
+    return ConfigBox(content)
+           ^^^^^^^^^^^^^^^^^^
+  File "box\\box.py", line 295, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+[2025-06-25 01:40:00,871: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-25 01:40:00,871: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-25 01:40:00,871: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-25 01:40:00,871: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-25 01:40:00,871: ERROR: main: Argument path_to_directories of type <class 'str'> to <function create_directories at 0x0000010B4B803B00> does not match annotation type <class 'list'>]
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\data_ingestion_pipeline.py", line 12, in initiate_data_ingestion
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\src\datascience\config\configuration.py", line 15, in __init__
+    create_directories(self.config.artifacts_root)
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\ensure\main.py", line 833, in __call__
+    raise EnsureError(msg.format(arg=arg, f=self.f, t=templ, valt=type(value)))
+ensure.main.EnsureError: Argument path_to_directories of type <class 'str'> to <function create_directories at 0x0000010B4B803B00> does not match annotation type <class 'list'>
+[2025-06-25 01:42:57,242: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-25 01:42:57,243: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-25 01:42:57,243: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-25 01:42:57,244: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-25 01:42:57,244: INFO: common: Directory for path: {path} created]
+[2025-06-25 01:42:57,244: INFO: common: Directory for path: {path} created]
+[2025-06-25 01:42:57,244: ERROR: main: Request.__init__() got an unexpected keyword argument 'filename']
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\data_ingestion_pipeline.py", line 15, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\components\data_ingenstion.py", line 17, in download_file
+    filename, headers = Request(
+                        ^^^^^^^^
+TypeError: Request.__init__() got an unexpected keyword argument 'filename'
+[2025-06-25 01:45:21,301: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-25 01:45:21,301: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-25 01:45:21,301: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-25 01:45:21,301: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-25 01:45:21,301: INFO: common: Directory for path: {path} created]
+[2025-06-25 01:45:21,301: INFO: common: Directory for path: {path} created]
+[2025-06-25 01:45:21,301: ERROR: main: 'module' object is not callable]
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\data_ingestion_pipeline.py", line 15, in initiate_data_ingestion
+    data_ingestion.download_file()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\components\data_ingenstion.py", line 17, in download_file
+    filename, headers = request(
+                        ^^^^^^^^
+TypeError: 'module' object is not callable
+[2025-06-25 01:46:09,685: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-25 01:46:09,686: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-25 01:46:09,686: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-25 01:46:09,687: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-25 01:46:09,687: INFO: common: Directory for path: {path} created]
+[2025-06-25 01:46:09,687: INFO: common: Directory for path: {path} created]
+[2025-06-25 01:46:10,305: INFO: data_ingenstion: artifacts/data_ingestion/data.zip download with following info: 
+Server: nginx/1.27.5
+Date: Wed, 25 Jun 2025 05:46:09 GMT
+Transfer-Encoding: chunked
+Connection: close
+
+]
+[2025-06-25 01:46:10,305: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
