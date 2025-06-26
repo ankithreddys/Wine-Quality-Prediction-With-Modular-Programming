@@ -1,6 +1,6 @@
 from src.datascience.constants import *
 from src.datascience.utils.common import read_yaml, create_directories
-from src.datascience.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
+from src.datascience.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainingConfig
 
 
 
@@ -56,4 +56,31 @@ class ConfigurationManager:
         )
 
         return data_transformation_config
+    
+    def get_training_config(self) -> ModelTrainingConfig:
+        config = self.config.model_training
+        model_params = self.params.XGBOOST_PARAMS
+        kf_params = self.params.KF_PARAMS
+        cv_params = self.params.CV_PARAMS
+        schema = self.schema.TARGET_COLUMN
+        create_directories([config.root_dir])
+
+        model_training_config = ModelTrainingConfig(
+            root_dir=config.root_dir,
+            train_df_path=config.train_df_path,
+            test_df_path=config.test_df_path,
+            model_name=config.model_name,
+            n_estimators=model_params.n_estimators,
+            learning_rate=model_params.learning_rate,
+            max_depth=model_params.max_depth,
+            random_state=model_params.random_state,
+            n_splits=kf_params.n_splits,
+            shuffle=kf_params.shuffle,
+            scoring=cv_params.scoring,
+            n_jobs=cv_params.n_jobs,
+            verbose=cv_params.verbose,
+            schema=schema
+        )
+        
+        return model_training_config
 

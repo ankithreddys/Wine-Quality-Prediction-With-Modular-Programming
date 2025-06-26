@@ -5,7 +5,6 @@ import joblib
 from src.datascience import logger
 from ensure import ensure_annotations
 from box import ConfigBox
-from typing import Any
 from pathlib import Path
 
 
@@ -44,7 +43,7 @@ def load_json(path_to_json_file:Path):
 
 
 @ensure_annotations
-def save_bin(data: Any, path: Path):
+def save_bin(data, path: Path):
     joblib.dump(value=data,filename=path)
     logger.info(f"Binary file saved at {path}")    
 

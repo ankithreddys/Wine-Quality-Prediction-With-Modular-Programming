@@ -24,3 +24,21 @@ class DataTransformationConfig:
     schema: dict
 
 
+@dataclass
+class ModelTrainingConfig:
+    root_dir: Path
+    train_df_path: Path
+    test_df_path: Path
+    model_name: str
+    n_estimators: list
+    learning_rate: list
+    max_depth: list
+    random_state: int
+    n_splits: int
+    shuffle: bool
+    scoring: str
+    n_jobs: int
+    verbose: int
+    schema: dict
+
+
