@@ -24,3 +24,13 @@ model_training:
   train_df_path: artifacts/data_transformation/train.csv
   test_df_path: artifacts/data_transformation/test.csv
   model_name: model.joblib
+  best_params_path: artifacts/model_training/best_params.json
+
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  test_X_path: artifacts/model_training/X_test.csv
+  test_y_path: artifacts/model_training/y_test.csv
+  model_path: artifacts/model_training/model.joblib
+  model_metrics: artifacts/model_evaluation/model_metrics.json
+  best_params_path: artifacts/model_training/best_params.json

@@ -2,7 +2,7 @@ from src.datascience.entity.config_entity import ModelTrainingConfig
 from src.datascience import logger
 from xgboost import XGBRegressor
 from sklearn.model_selection import KFold, GridSearchCV
-from src.datascience.utils.common import save_bin
+from src.datascience.utils.common import save_bin, save_json
 import pandas as pd
 import os
 from pathlib import Path
@@ -62,6 +62,7 @@ class ModelTraining:
         grid_cv.fit(X_train,y_train)
 
         logger.info(f"Best Params : {grid_cv.best_params_}")
+        save_json(Path(self.config.best_params_path),grid_cv.best_params_)
         best_model = grid_cv.best_estimator_
         
         model_path = os.path.join(self.config.root_dir,self.config.model_name)

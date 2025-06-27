@@ -1,7 +1,10 @@
 from src.datascience.constants import *
-from src.datascience.utils.common import read_yaml, create_directories
-from src.datascience.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainingConfig
+from src.datascience.utils.common import read_yaml, create_directories, save_json
+from src.datascience.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainingConfig, ModelEvaluationConfig
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
 
 class ConfigurationManager:
@@ -70,6 +73,7 @@ class ConfigurationManager:
             train_df_path=config.train_df_path,
             test_df_path=config.test_df_path,
             model_name=config.model_name,
+            best_params_path=config.best_params_path,
             n_estimators=model_params.n_estimators,
             learning_rate=model_params.learning_rate,
             max_depth=model_params.max_depth,
@@ -83,4 +87,23 @@ class ConfigurationManager:
         )
         
         return model_training_config
+    
+
+    def get_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation
+        schema = self.schema.TARGET_COLUMN
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir=config.root_dir,
+            test_X_path=config.test_X_path,
+            test_y_path=config.test_y_path,
+            model_path=config.model_path,
+            model_metrics=config.model_metrics,
+            best_params_path=config.best_params_path,
+            mlflow_uri=os.getenv("MLFLOW_TRACKING_URI"),
+            schema=schema
+        )
+
+        return model_evaluation_config
 

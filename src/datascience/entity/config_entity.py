@@ -30,6 +30,7 @@ class ModelTrainingConfig:
     train_df_path: Path
     test_df_path: Path
     model_name: str
+    best_params_path: Path
     n_estimators: list
     learning_rate: list
     max_depth: list
@@ -41,4 +42,16 @@ class ModelTrainingConfig:
     verbose: int
     schema: dict
 
+
+@dataclass
+class ModelEvaluationConfig:
+    root_dir: Path
+    test_X_path: Path
+    test_y_path: Path
+    model_path: Path
+    model_metrics: Path
+    best_params_path: Path
+    mlflow_uri: str
+    schema: dict
+    
 

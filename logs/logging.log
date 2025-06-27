@@ -1,55 +1,1097 @@
-[2025-06-26 18:21:52,329: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
-[2025-06-26 18:21:52,329: INFO: common: yaml file: config\config.yaml loded successfully]
-[2025-06-26 18:21:52,329: INFO: common: yaml file: schema.yaml loded successfully]
-[2025-06-26 18:21:52,329: INFO: common: yaml file: params.yaml loded successfully]
-[2025-06-26 18:21:52,329: INFO: common: Directory for path: {path} created]
-[2025-06-26 18:21:52,329: INFO: common: Directory for path: {path} created]
-[2025-06-26 18:21:52,329: INFO: data_ingenstion: file already exists]
-[2025-06-26 18:21:52,340: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
-[2025-06-26 18:21:52,341: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
-[2025-06-26 18:21:52,341: INFO: common: yaml file: config\config.yaml loded successfully]
-[2025-06-26 18:21:52,341: INFO: common: yaml file: schema.yaml loded successfully]
-[2025-06-26 18:21:52,341: INFO: common: yaml file: params.yaml loded successfully]
-[2025-06-26 18:21:52,341: INFO: common: Directory for path: {path} created]
-[2025-06-26 18:21:52,341: INFO: common: Directory for path: {path} created]
-[2025-06-26 18:21:52,350: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
-[2025-06-26 18:21:52,350: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
-[2025-06-26 18:21:52,350: INFO: data_validation: Validation of Data Schema Passed for citric acid]
-[2025-06-26 18:21:52,350: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
-[2025-06-26 18:21:52,350: INFO: data_validation: Validation of Data Schema Passed for chlorides]
-[2025-06-26 18:21:52,350: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
-[2025-06-26 18:21:52,351: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
-[2025-06-26 18:21:52,351: INFO: data_validation: Validation of Data Schema Passed for density]
-[2025-06-26 18:21:52,351: INFO: data_validation: Validation of Data Schema Passed for pH]
-[2025-06-26 18:21:52,351: INFO: data_validation: Validation of Data Schema Passed for sulphates]
-[2025-06-26 18:21:52,351: INFO: data_validation: Validation of Data Schema Passed for alcohol]
-[2025-06-26 18:21:52,351: INFO: data_validation: Validation of Data Schema Passed for quality]
-[2025-06-26 18:21:52,351: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
-[2025-06-26 18:21:52,352: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
-[2025-06-26 18:21:52,353: INFO: common: yaml file: config\config.yaml loded successfully]
-[2025-06-26 18:21:52,354: INFO: common: yaml file: schema.yaml loded successfully]
-[2025-06-26 18:21:52,355: INFO: common: yaml file: params.yaml loded successfully]
-[2025-06-26 18:21:52,356: INFO: common: Directory for path: {path} created]
-[2025-06-26 18:21:52,356: INFO: common: Directory for path: {path} created]
-[2025-06-26 18:21:52,371: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
-[2025-06-26 18:21:52,372: INFO: data_transformation: Shape of training df : (1119, 12)]
-[2025-06-26 18:21:52,372: INFO: data_transformation: Shape of testing df : (480, 12)]
-[2025-06-26 18:21:52,372: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
-[2025-06-26 18:21:52,372: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
-[2025-06-26 18:21:52,373: INFO: common: yaml file: config\config.yaml loded successfully]
-[2025-06-26 18:21:52,374: INFO: common: yaml file: schema.yaml loded successfully]
-[2025-06-26 18:21:52,375: INFO: common: yaml file: params.yaml loded successfully]
-[2025-06-26 18:21:52,376: INFO: common: Directory for path: {path} created]
-[2025-06-26 18:21:52,376: INFO: common: Directory for path: {path} created]
-[2025-06-26 18:21:52,376: INFO: model_training: Regressor Defined]
-[2025-06-26 18:21:52,377: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
-[2025-06-26 18:21:52,378: INFO: model_training: Training Dependent Variables info : (1119, 11)]
-[2025-06-26 18:21:52,378: INFO: model_training: Training InDependent Variables info : (1119,)]
-[2025-06-26 18:21:52,378: INFO: model_training: Testing Dependent Variables info : (480, 11)]
-[2025-06-26 18:21:52,378: INFO: model_training: Testing InDependent Variables info : (480,)]
-[2025-06-26 18:21:52,385: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
-[2025-06-26 18:21:52,386: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
-[2025-06-26 18:21:58,169: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
-[2025-06-26 18:21:58,172: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
-[2025-06-26 18:21:58,172: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
-[2025-06-26 18:21:58,172: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:22:05,882: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:22:05,888: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:22:05,888: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:22:05,892: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:22:05,892: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:22:05,892: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:22:05,892: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:22:05,897: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:22:05,898: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:22:05,904: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:22:05,906: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:22:05,907: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:22:05,907: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:22:05,907: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:22:05,912: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:22:05,912: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:22:05,912: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:22:05,912: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:22:05,912: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:22:05,913: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:22:05,913: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:22:05,913: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:22:05,913: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:22:05,913: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:22:05,913: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:22:05,913: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:22:05,913: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:22:05,914: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:22:05,916: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:22:05,917: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:22:05,918: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:22:05,919: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:22:05,919: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:22:05,932: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:22:05,932: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:22:05,932: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:22:05,932: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:22:05,932: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:22:05,937: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:22:05,937: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:22:05,937: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:22:05,937: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:22:05,937: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:22:05,941: INFO: model_training: Regressor Defined]
+[2025-06-27 00:22:05,941: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:22:05,946: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:22:05,946: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:22:05,947: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:22:05,947: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:22:05,950: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:22:05,951: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:22:14,309: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:22:14,311: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:22:14,313: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:22:14,313: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:22:14,313: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:22:14,314: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:22:14,317: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:22:14,319: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:22:14,321: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:22:14,322: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:22:14,322: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:22:14,329: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:22:14,758: INFO: common: json file saved at : artifacts\model_evaluation\model_metrics.json]
+[2025-06-27 00:22:14,758: INFO: common: json file loaded from : artifacts\model_training\best_params.json]
+[2025-06-27 00:22:18,457: INFO: main: >>>>>>>>>>>>>>> stage Model Evaluation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:24:24,128: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:24:24,139: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:24:24,142: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:24:24,143: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:24:24,144: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:24,144: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:24,144: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:24:24,148: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:24:24,148: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:24:24,150: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:24:24,152: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:24:24,153: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:24:24,153: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:24,154: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:24,155: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:24:24,155: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:24:24,155: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:24:24,158: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:24:24,158: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:24:24,158: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:24:24,158: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:24:24,158: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:24:24,158: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:24:24,158: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:24:24,158: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:24:24,159: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:24:24,159: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:24:24,160: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:24:24,162: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:24:24,163: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:24:24,164: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:24:24,165: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:24,165: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:24,179: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:24:24,179: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:24:24,179: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:24:24,180: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:24:24,180: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:24:24,182: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:24:24,183: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:24:24,183: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:24:24,183: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:24,183: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:24,185: INFO: model_training: Regressor Defined]
+[2025-06-27 00:24:24,185: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:24:24,190: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:24:24,190: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:24:24,190: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:24:24,191: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:24:24,193: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:24:24,195: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:24:32,412: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:24:32,412: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:24:32,414: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:24:32,414: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:24:32,414: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:24:32,414: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:24:32,418: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:24:32,421: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:24:32,422: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:24:32,423: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:32,423: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:32,430: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:24:32,431: ERROR: main: 'ModelEvaluationConfig' object has no attribute 'mlflow_url']
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 63, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\model_evaluation_pipeline.py", line 13, in initiate_model_evaluation
+    model_evaluation.log_into_mlfow()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\components\model_evaluation.py", line 31, in log_into_mlfow
+    print(self.config.mlflow_url)
+          ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ModelEvaluationConfig' object has no attribute 'mlflow_url'. Did you mean: 'mlflow_uri'?
+[2025-06-27 00:24:48,035: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:24:48,035: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:24:48,035: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:24:48,035: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:24:48,035: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:48,035: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:48,048: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:24:48,051: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:24:48,052: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:24:48,054: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:24:48,054: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:24:48,054: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:24:48,054: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:48,058: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:24:48,062: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:24:48,068: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:24:48,068: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:24:48,071: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:24:48,072: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:24:48,073: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:24:48,074: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:48,074: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:48,084: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:24:48,084: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:24:48,090: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:24:48,090: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:24:48,090: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:24:48,092: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:24:48,093: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:24:48,095: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:24:48,095: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:48,096: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:48,096: INFO: model_training: Regressor Defined]
+[2025-06-27 00:24:48,096: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:24:48,100: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:24:48,100: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:24:48,101: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:24:48,101: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:24:48,104: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:24:48,105: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:24:55,830: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:24:55,830: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:24:55,835: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:24:55,835: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:24:55,835: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:24:55,835: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:24:55,839: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:24:55,841: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:24:55,844: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:24:55,845: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:55,845: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:24:55,853: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:24:56,669: INFO: common: json file saved at : artifacts\model_evaluation\model_metrics.json]
+[2025-06-27 00:24:56,669: INFO: common: json file loaded from : artifacts\model_training\best_params.json]
+[2025-06-27 00:24:57,634: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 63, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\model_evaluation_pipeline.py", line 13, in initiate_model_evaluation
+    model_evaluation.log_into_mlfow()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\components\model_evaluation.py", line 47, in log_into_mlfow
+    mlflow.sklearn.log_model(sk_model=model, name="XgBoostRegressor Model", registered_model_name="XgBoostRegressor", )
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-06-27 00:27:57,195: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:27:57,195: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:27:57,195: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:27:57,195: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:27:57,195: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:27:57,195: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:27:57,195: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:27:57,205: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:27:57,207: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:27:57,209: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:27:57,211: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:27:57,211: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:27:57,211: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:27:57,211: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:27:57,219: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:27:57,219: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:27:57,219: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:27:57,219: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:27:57,219: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:27:57,219: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:27:57,221: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:27:57,221: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:27:57,221: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:27:57,221: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:27:57,221: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:27:57,221: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:27:57,223: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:27:57,223: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:27:57,226: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:27:57,227: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:27:57,227: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:27:57,227: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:27:57,227: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:27:57,243: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:27:57,243: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:27:57,243: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:27:57,243: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:27:57,243: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:27:57,250: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:27:57,250: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:27:57,250: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:27:57,250: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:27:57,250: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:27:57,250: INFO: model_training: Regressor Defined]
+[2025-06-27 00:27:57,250: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:27:57,259: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:27:57,259: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:27:57,259: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:27:57,259: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:27:57,259: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:27:57,259: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:28:05,443: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:28:05,444: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:28:05,446: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:28:05,446: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:28:05,446: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:28:05,446: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:28:05,449: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:28:05,451: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:28:05,453: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:28:05,454: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:28:05,454: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:28:05,458: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:28:06,262: INFO: common: json file saved at : artifacts\model_evaluation\model_metrics.json]
+[2025-06-27 00:28:06,264: INFO: common: json file loaded from : artifacts\model_training\best_params.json]
+[2025-06-27 00:28:07,977: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 63, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\model_evaluation_pipeline.py", line 13, in initiate_model_evaluation
+    model_evaluation.log_into_mlfow()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\components\model_evaluation.py", line 47, in log_into_mlfow
+    mlflow.sklearn.log_model(model,"Model", registered_model_name="XgBoostRegressor")
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-06-27 00:29:58,312: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:29:58,322: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:29:58,322: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:29:58,322: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:29:58,322: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:29:58,322: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:29:58,322: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:29:58,330: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:29:58,330: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:29:58,332: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:29:58,332: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:29:58,332: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:29:58,332: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:29:58,332: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:29:58,340: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:29:58,340: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:29:58,340: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:29:58,340: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:29:58,340: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:29:58,341: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:29:58,341: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:29:58,341: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:29:58,341: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:29:58,341: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:29:58,341: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:29:58,341: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:29:58,341: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:29:58,342: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:29:58,344: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:29:58,346: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:29:58,347: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:29:58,347: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:29:58,347: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:29:58,361: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:29:58,361: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:29:58,361: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:29:58,361: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:29:58,361: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:29:58,361: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:29:58,361: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:29:58,367: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:29:58,368: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:29:58,368: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:29:58,369: INFO: model_training: Regressor Defined]
+[2025-06-27 00:29:58,369: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:29:58,372: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:29:58,373: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:29:58,374: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:29:58,374: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:29:58,377: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:29:58,378: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:30:06,368: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:30:06,368: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:30:06,371: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:30:06,371: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:30:06,371: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:30:06,371: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:30:06,375: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:30:06,376: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:30:06,379: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:30:06,380: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:30:06,380: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:30:06,387: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:30:07,170: INFO: common: json file saved at : artifacts\model_evaluation\model_metrics.json]
+[2025-06-27 00:30:07,170: INFO: common: json file loaded from : artifacts\model_training\best_params.json]
+[2025-06-27 00:30:08,385: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 63, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\model_evaluation_pipeline.py", line 13, in initiate_model_evaluation
+    model_evaluation.log_into_mlfow()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\components\model_evaluation.py", line 46, in log_into_mlfow
+    mlflow.sklearn.log_model(model,"XgBoostRegressor Model")
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-06-27 00:32:33,197: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:32:33,197: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:32:33,197: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:32:33,197: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:32:33,207: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:32:33,207: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:32:33,208: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:32:33,211: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:32:33,211: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:32:33,213: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:32:33,213: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:32:33,216: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:32:33,217: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:32:33,217: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:32:33,221: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:32:33,221: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:32:33,221: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:32:33,222: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:32:33,222: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:32:33,222: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:32:33,222: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:32:33,222: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:32:33,222: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:32:33,223: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:32:33,223: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:32:33,223: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:32:33,223: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:32:33,223: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:32:33,225: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:32:33,226: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:32:33,228: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:32:33,228: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:32:33,229: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:32:33,243: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:32:33,244: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:32:33,244: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:32:33,244: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:32:33,244: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:32:33,247: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:32:33,248: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:32:33,249: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:32:33,249: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:32:33,250: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:32:33,250: INFO: model_training: Regressor Defined]
+[2025-06-27 00:32:33,250: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:32:33,254: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:32:33,255: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:32:33,255: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:32:33,255: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:32:33,259: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:32:33,260: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:32:41,196: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:32:41,196: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:32:41,198: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:32:41,198: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:32:41,198: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:32:41,200: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:32:41,202: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:32:41,206: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:32:41,208: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:32:41,210: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:32:41,210: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:32:41,216: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:32:41,891: INFO: common: json file saved at : artifacts\model_evaluation\model_metrics.json]
+[2025-06-27 00:32:41,891: INFO: common: json file loaded from : artifacts\model_training\best_params.json]
+[2025-06-27 00:32:42,774: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 63, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\model_evaluation_pipeline.py", line 13, in initiate_model_evaluation
+    model_evaluation.log_into_mlfow()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\components\model_evaluation.py", line 47, in log_into_mlfow
+    mlflow.sklearn.log_model(model,"Model", registered_model_name="XgBoostRegressor")
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-06-27 00:33:20,051: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:33:20,053: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:33:20,055: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:33:20,056: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:33:20,058: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:20,058: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:20,059: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:33:20,063: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:33:20,063: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:33:20,064: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:33:20,064: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:33:20,064: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:33:20,064: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:20,064: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:20,073: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:33:20,073: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:33:20,073: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:33:20,073: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:33:20,073: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:33:20,074: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:33:20,074: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:33:20,074: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:33:20,074: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:33:20,074: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:33:20,074: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:33:20,074: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:33:20,074: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:33:20,074: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:33:20,076: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:33:20,076: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:33:20,076: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:33:20,076: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:20,076: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:20,095: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:33:20,095: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:33:20,095: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:33:20,095: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:33:20,095: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:33:20,098: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:33:20,100: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:33:20,100: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:33:20,102: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:20,102: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:20,102: INFO: model_training: Regressor Defined]
+[2025-06-27 00:33:20,102: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:33:20,107: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:33:20,107: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:33:20,107: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:33:20,107: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:33:20,110: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:33:20,112: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:33:28,395: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:33:28,397: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:33:28,399: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:33:28,399: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:33:28,399: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:33:28,399: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:33:28,403: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:33:28,405: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:33:28,407: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:33:28,408: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:28,408: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:28,413: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:33:29,111: INFO: common: json file saved at : artifacts\model_evaluation\model_metrics.json]
+[2025-06-27 00:33:29,111: INFO: common: json file loaded from : artifacts\model_training\best_params.json]
+[2025-06-27 00:33:30,036: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 63, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\model_evaluation_pipeline.py", line 13, in initiate_model_evaluation
+    model_evaluation.log_into_mlfow()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\components\model_evaluation.py", line 46, in log_into_mlfow
+    mlflow.sklearn.log_model(model,"Model", registered_model_name="XgBoostRegressor")
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-06-27 00:33:43,341: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:33:43,341: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:33:43,341: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:33:43,341: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:33:43,341: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:43,341: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:43,341: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:33:43,352: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:33:43,352: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:33:43,354: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:33:43,356: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:33:43,357: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:33:43,357: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:43,357: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:43,362: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:33:43,362: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:33:43,362: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:33:43,362: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:33:43,362: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:33:43,362: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:33:43,362: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:33:43,364: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:33:43,364: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:33:43,364: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:33:43,364: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:33:43,364: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:33:43,364: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:33:43,364: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:33:43,368: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:33:43,369: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:33:43,370: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:33:43,370: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:43,370: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:43,385: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:33:43,385: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:33:43,386: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:33:43,386: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:33:43,386: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:33:43,388: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:33:43,388: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:33:43,391: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:33:43,392: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:43,392: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:43,392: INFO: model_training: Regressor Defined]
+[2025-06-27 00:33:43,393: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:33:43,397: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:33:43,397: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:33:43,397: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:33:43,397: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:33:43,402: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:33:43,407: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:33:51,710: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:33:51,710: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:33:51,712: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:33:51,712: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:33:51,712: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:33:51,712: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:33:51,717: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:33:51,718: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:33:51,721: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:33:51,722: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:51,722: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:33:51,729: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:33:52,481: INFO: common: json file saved at : artifacts\model_evaluation\model_metrics.json]
+[2025-06-27 00:33:52,481: INFO: common: json file loaded from : artifacts\model_training\best_params.json]
+[2025-06-27 00:33:53,637: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 63, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\model_evaluation_pipeline.py", line 13, in initiate_model_evaluation
+    model_evaluation.log_into_mlfow()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\components\model_evaluation.py", line 45, in log_into_mlfow
+    mlflow.sklearn.log_model(model,"Model")
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-06-27 00:38:03,040: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:38:03,040: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:38:03,040: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:38:03,040: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:38:03,040: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:38:03,040: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:38:03,050: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:38:03,054: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:38:03,054: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:38:03,056: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:38:03,056: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:38:03,056: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:38:03,056: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:38:03,056: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:38:03,063: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:38:03,063: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:38:03,063: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:38:03,063: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:38:03,064: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:38:03,064: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:38:03,064: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:38:03,065: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:38:03,065: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:38:03,065: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:38:03,065: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:38:03,065: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:38:03,065: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:38:03,065: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:38:03,066: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:38:03,066: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:38:03,070: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:38:03,070: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:38:03,071: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:38:03,085: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:38:03,085: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:38:03,085: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:38:03,085: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:38:03,085: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:38:03,088: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:38:03,088: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:38:03,091: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:38:03,091: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:38:03,092: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:38:03,092: INFO: model_training: Regressor Defined]
+[2025-06-27 00:38:03,092: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:38:03,096: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:38:03,096: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:38:03,096: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:38:03,096: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:38:03,097: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:38:03,097: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:38:11,029: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:38:11,029: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:38:11,031: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:38:11,031: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:38:11,033: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:38:11,033: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:38:11,035: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:38:11,039: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:38:11,041: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:38:11,042: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:38:11,042: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:38:11,049: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:38:11,754: INFO: common: json file saved at : artifacts\model_evaluation\model_metrics.json]
+[2025-06-27 00:38:11,754: INFO: common: json file loaded from : artifacts\model_training\best_params.json]
+[2025-06-27 00:38:12,815: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 63, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\model_evaluation_pipeline.py", line 13, in initiate_model_evaluation
+    model_evaluation.log_into_mlfow()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\components\model_evaluation.py", line 51, in log_into_mlfow
+    mlflow.sklearn.log_model(model, "model", registered_model_name="XgBoostRegressor")
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-06-27 00:40:30,574: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:40:30,574: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:40:30,574: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:40:30,574: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:40:30,574: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:40:30,590: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:40:30,590: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:40:30,594: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:40:30,594: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:40:30,596: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:40:30,597: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:40:30,599: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:40:30,599: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:40:30,599: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:40:30,603: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:40:30,603: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:40:30,603: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:40:30,603: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:40:30,604: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:40:30,604: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:40:30,604: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:40:30,604: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:40:30,604: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:40:30,604: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:40:30,604: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:40:30,604: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:40:30,606: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:40:30,606: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:40:30,607: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:40:30,608: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:40:30,610: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:40:30,610: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:40:30,610: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:40:30,625: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:40:30,625: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:40:30,625: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:40:30,625: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:40:30,626: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:40:30,627: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:40:30,629: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:40:30,630: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:40:30,631: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:40:30,631: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:40:30,631: INFO: model_training: Regressor Defined]
+[2025-06-27 00:40:30,632: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:40:30,635: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:40:30,636: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:40:30,636: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:40:30,636: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:40:30,637: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:40:30,637: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:40:38,781: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:40:38,781: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:40:38,784: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:40:38,784: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:40:38,784: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:40:38,784: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:40:38,788: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:40:38,790: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:40:38,792: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:40:38,793: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:40:38,793: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:40:38,799: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:40:39,468: INFO: common: json file saved at : artifacts\model_evaluation\model_metrics.json]
+[2025-06-27 00:40:39,468: INFO: common: json file loaded from : artifacts\model_training\best_params.json]
+[2025-06-27 00:40:41,858: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "C:\PROJECTS\DatascienceProject\main.py", line 63, in <module>
+    model_evaluation.initiate_model_evaluation()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\pipeline\model_evaluation_pipeline.py", line 13, in initiate_model_evaluation
+    model_evaluation.log_into_mlfow()
+  File "C:\PROJECTS\DatascienceProject\src\datascience\components\model_evaluation.py", line 53, in log_into_mlfow
+    mlflow.sklearn.log_model(model, "model")
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PROJECTS\DatascienceProject\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-06-27 00:43:40,244: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:43:40,257: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:43:40,257: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:43:40,265: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:43:40,265: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:43:40,266: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:43:40,266: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:43:40,269: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:43:40,269: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:43:40,269: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:43:40,274: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:43:40,275: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:43:40,276: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:43:40,276: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:43:40,277: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:43:40,277: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:43:40,282: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:43:40,283: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:43:40,285: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:43:40,286: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:43:40,287: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:43:40,287: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:43:40,301: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:43:40,301: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:43:40,302: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:43:40,302: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:43:40,302: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:43:40,303: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:43:40,305: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:43:40,306: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:43:40,307: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:43:40,307: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:43:40,307: INFO: model_training: Regressor Defined]
+[2025-06-27 00:43:40,307: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:43:40,308: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:43:40,308: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:43:40,308: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:43:40,313: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:43:40,316: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:43:40,317: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:43:48,407: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:43:48,407: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:43:48,409: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:43:48,409: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:43:48,409: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:43:48,409: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:43:48,413: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:43:48,416: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:43:48,418: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:43:48,419: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:43:48,419: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:43:48,423: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:43:49,137: INFO: common: json file saved at : artifacts\model_evaluation\model_metrics.json]
+[2025-06-27 00:43:49,139: INFO: common: json file loaded from : artifacts\model_training\best_params.json]
+[2025-06-27 00:43:49,976: INFO: model_evaluation: Model logged successfully as artifact]
+[2025-06-27 00:43:50,210: INFO: main: >>>>>>>>>>>>>>> stage Model Evaluation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:46:24,546: INFO: main: >>>>>>>>>>>>>>  stage Data Ingestion Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:46:24,546: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:46:24,550: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:46:24,550: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:46:24,550: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:46:24,552: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:46:24,552: INFO: data_ingenstion: file already exists]
+[2025-06-27 00:46:24,553: INFO: main: >>>>>>>>>>>>>>> stage Data Ingestion Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:46:24,553: INFO: main: >>>>>>>>>>>>>>  stage Data Validation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:46:24,553: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:46:24,553: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:46:24,560: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:46:24,561: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:46:24,562: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:46:24,565: INFO: data_validation: Validation of Data Schema Passed for fixed acidity]
+[2025-06-27 00:46:24,565: INFO: data_validation: Validation of Data Schema Passed for volatile acidity]
+[2025-06-27 00:46:24,565: INFO: data_validation: Validation of Data Schema Passed for citric acid]
+[2025-06-27 00:46:24,565: INFO: data_validation: Validation of Data Schema Passed for residual sugar]
+[2025-06-27 00:46:24,567: INFO: data_validation: Validation of Data Schema Passed for chlorides]
+[2025-06-27 00:46:24,567: INFO: data_validation: Validation of Data Schema Passed for free sulfur dioxide]
+[2025-06-27 00:46:24,567: INFO: data_validation: Validation of Data Schema Passed for total sulfur dioxide]
+[2025-06-27 00:46:24,567: INFO: data_validation: Validation of Data Schema Passed for density]
+[2025-06-27 00:46:24,568: INFO: data_validation: Validation of Data Schema Passed for pH]
+[2025-06-27 00:46:24,568: INFO: data_validation: Validation of Data Schema Passed for sulphates]
+[2025-06-27 00:46:24,568: INFO: data_validation: Validation of Data Schema Passed for alcohol]
+[2025-06-27 00:46:24,568: INFO: data_validation: Validation of Data Schema Passed for quality]
+[2025-06-27 00:46:24,569: INFO: main: >>>>>>>>>>>>>>> stage Data Validation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:46:24,569: INFO: main: >>>>>>>>>>>>>>  stage Data Transformation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:46:24,571: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:46:24,573: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:46:24,573: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:46:24,573: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:46:24,573: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:46:24,591: INFO: data_transformation: Created Training and Testing files in artifacts/data_transformation]
+[2025-06-27 00:46:24,591: INFO: data_transformation: Shape of training df : (1119, 12)]
+[2025-06-27 00:46:24,591: INFO: data_transformation: Shape of testing df : (480, 12)]
+[2025-06-27 00:46:24,591: INFO: main: >>>>>>>>>>>>>>> stage Data Transformation Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:46:24,591: INFO: main: >>>>>>>>>>>>>>  stage Model Training Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:46:24,593: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:46:24,595: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:46:24,597: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:46:24,597: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:46:24,598: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:46:24,598: INFO: model_training: Regressor Defined]
+[2025-06-27 00:46:24,598: INFO: model_training: Params Set for Training are : {'n_estimators': BoxList([50, 100, 200]), 'max_depth': BoxList([3, 5, 7]), 'learning_rate': BoxList([0.01, 0.1, 0.2])}]
+[2025-06-27 00:46:24,601: INFO: model_training: Training Dependent Variables info : (1119, 11)]
+[2025-06-27 00:46:24,601: INFO: model_training: Training InDependent Variables info : (1119,)]
+[2025-06-27 00:46:24,603: INFO: model_training: Testing Dependent Variables info : (480, 11)]
+[2025-06-27 00:46:24,603: INFO: model_training: Testing InDependent Variables info : (480,)]
+[2025-06-27 00:46:24,606: INFO: model_training: X_test saved at : artifacts/model_training\X_test.csv]
+[2025-06-27 00:46:24,608: INFO: model_training: y_test saved at : artifacts/model_training\y_test.csv]
+[2025-06-27 00:46:33,075: INFO: model_training: Best Params : {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}]
+[2025-06-27 00:46:33,075: INFO: common: json file saved at : artifacts\model_training\best_params.json]
+[2025-06-27 00:46:33,077: INFO: common: Binary file saved at artifacts\model_training\model.joblib]
+[2025-06-27 00:46:33,077: INFO: model_training: Model Saved at : artifacts/model_training\model.joblib]
+[2025-06-27 00:46:33,077: INFO: main: >>>>>>>>>>>>>>> stage Model Training Stage completed  <<<<<<<<<<<<<<]
+[2025-06-27 00:46:33,077: INFO: main: >>>>>>>>>>>>>>  stage Model Evaluation Stage started  <<<<<<<<<<<<<]
+[2025-06-27 00:46:33,077: INFO: common: yaml file: config\config.yaml loded successfully]
+[2025-06-27 00:46:33,083: INFO: common: yaml file: schema.yaml loded successfully]
+[2025-06-27 00:46:33,085: INFO: common: yaml file: params.yaml loded successfully]
+[2025-06-27 00:46:33,086: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:46:33,086: INFO: common: Directory for path: {path} created]
+[2025-06-27 00:46:33,093: INFO: common: Binary data loaded from : artifacts\model_training\model.joblib]
+[2025-06-27 00:46:33,778: INFO: common: json file saved at : artifacts\model_evaluation\model_metrics.json]
+[2025-06-27 00:46:33,778: INFO: common: json file loaded from : artifacts\model_training\best_params.json]
+[2025-06-27 00:46:34,680: INFO: model_evaluation: Model logged successfully as artifact]
+[2025-06-27 00:46:34,906: INFO: main: >>>>>>>>>>>>>>> stage Model Evaluation Stage completed  <<<<<<<<<<<<<<]

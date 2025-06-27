@@ -5,3 +5,5 @@ python-box
 pandas
 scikit-learn
 xgboost
+mlflow
+python-dotenv

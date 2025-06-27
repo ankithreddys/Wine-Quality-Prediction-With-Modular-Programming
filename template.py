@@ -26,6 +26,7 @@ list_of_files = ["./github/workflows/.gitkeep",
                  "main.py",
                  "DockerFile",
                  "setup.py",
+                 ".env",
                  "research/research.ipynb",
                  "templates/index.html"]
 
